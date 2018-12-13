@@ -1,0 +1,55 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="product-detail">
+        {% if image_title %}
+            <img src="{{ image_title.get_absolute_url }}">
+        {% else %}
+            <img src="{% static "img/no_image.png" %}">
+        {% endif %} 
+
+    <h1>{{ product.name }}</h1>
+    <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+    <p class="price">${{ product.price }}</p>
+    <form action="{% url "cart:cart_add" product.id %}" method="post">
+      {{ cart_product_form }}
+      {% csrf_token %}
+      <input type="submit" value="Add to cart">
+    </form>
+    {{ product.description|linebreaks }}
+
+    <br><br><br><br><br><br><br><br><br><br><br><hr>
+    {% for image in images_small %}
+        <a href="{% url 'shop:product_detail_image_id' product.id product.slug image.id %}">
+            <img src="{{ image.get_absolute_url }}" style="height: 100px; width: 100px;">
+        </a>
+    {% endfor %} 
+
+       {% if recommended_products %}
+            <div class="recommendations">
+                <h3>Люди купившие это, так же купили:</h3>
+                {% for p in recommended_products %}
+                    <div class="item">
+
+                        <a href="{{ p.get_absolute_url }}">
+                            {% for image in p.images.all %}
+                                {% if forloop.first %}<img src="{{ image.get_absolute_url }}">{% endif %}
+                            {% empty %}
+                                <img src="{% static "img/no_image.png" %}">
+                            {% endfor %}   
+                        </a>
+
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,518 @@
+[2018-12-03 15:58:14,442: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 15:58:14,452: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 15:58:15,478: INFO/MainProcess] mingle: all alone
+[2018-12-03 15:58:15,492: WARNING/MainProcess] /home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2018-12-03 15:58:15,492: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 15:58:51,997: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 15:58:52,010: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 15:58:53,035: INFO/MainProcess] mingle: all alone
+[2018-12-03 15:58:53,050: WARNING/MainProcess] /home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2018-12-03 15:58:53,050: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 15:59:26,165: INFO/MainProcess] Received task: orders.tasks.order_created[86783b46-7e40-4902-b4b9-9673bcc9a5cf]  
+[2018-12-03 15:59:27,064: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[86783b46-7e40-4902-b4b9-9673bcc9a5cf] succeeded in 0.8975226689999545s: 1
+[2018-12-03 16:04:12,882: INFO/MainProcess] Received task: orders.tasks.order_created[a7ed49d2-4075-41fa-975c-0cf27d02b3cf]  
+[2018-12-03 16:04:13,874: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[a7ed49d2-4075-41fa-975c-0cf27d02b3cf] succeeded in 0.9921789919999355s: 1
+[2018-12-03 16:05:16,452: INFO/MainProcess] Received task: orders.tasks.order_created[67d4e864-1b79-49c2-8923-d5949995072f]  
+[2018-12-03 16:05:17,416: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[67d4e864-1b79-49c2-8923-d5949995072f] succeeded in 0.9634780370001863s: 1
+[2018-12-03 16:21:06,525: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 16:21:06,547: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 16:21:06,919: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 320, in start
+    blueprint.start(self)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 38, in start
+    self.sync(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 42, in sync
+    replies = self.send_hello(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 55, in send_hello
+    replies = inspect.hello(c.hostname, our_revoked._data) or {}
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 129, in hello
+    return self._request('hello', from_node=from_node, revoked=revoked)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 81, in _request
+    timeout=self.timeout, reply=True,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 436, in broadcast
+    limit, callback, channel=channel,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 321, in _broadcast
+    channel=chan)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 360, in _collect
+    self.connection.drain_events(timeout=timeout)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/connection.py", line 301, in drain_events
+    return self.transport.drain_events(self.connection, **kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/transport/pyamqp.py", line 103, in drain_events
+    return connection.drain_events(**kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 491, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 497, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 501, in on_inbound_method
+    method_sig, payload, content,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/abstract_channel.py", line 128, in dispatch_method
+    listener(*args)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 623, in _on_close
+    (class_id, method_id), ConnectionError)
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2018-12-03 16:21:06,932: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds...
+
+[2018-12-03 16:21:08,944: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds...
+
+[2018-12-03 16:21:12,954: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds...
+
+[2018-12-03 16:21:18,965: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds...
+
+[2018-12-03 16:21:26,979: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds...
+
+[2018-12-03 16:21:36,996: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds...
+
+[2018-12-03 16:21:49,015: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds...
+
+[2018-12-03 16:22:03,036: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds...
+
+[2018-12-03 16:22:19,059: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds...
+
+[2018-12-03 16:29:00,622: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 16:29:00,632: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 16:29:01,658: INFO/MainProcess] mingle: all alone
+[2018-12-03 16:29:01,673: INFO/MainProcess] celery@python3github ready.
+
+worker: Hitting Ctrl+C again will terminate all running tasks!
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@python3github v4.1.0 (latentcall)
+---- **** ----- 
+--- * ***  * -- Linux-4.15.0-39-generic-x86_64-with-Ubuntu-18.04-bionic 2018-12-03 16:29:00
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         myshop:0x7f9ff753cd30
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2018-12-03 16:31:14,537: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 16:31:14,547: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 16:31:15,569: INFO/MainProcess] mingle: all alone
+[2018-12-03 16:31:15,583: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 16:31:15,584: INFO/MainProcess] Received task: orders.tasks.order_created[ac6bafb7-a678-421b-a944-b730e3d68d9c]  
+[2018-12-03 16:31:17,067: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[ac6bafb7-a678-421b-a944-b730e3d68d9c] succeeded in 1.3817164999999818s: 1
+[2018-12-03 16:32:03,361: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 16:32:03,384: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 16:32:03,725: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 320, in start
+    blueprint.start(self)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 38, in start
+    self.sync(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 42, in sync
+    replies = self.send_hello(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 55, in send_hello
+    replies = inspect.hello(c.hostname, our_revoked._data) or {}
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 129, in hello
+    return self._request('hello', from_node=from_node, revoked=revoked)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 81, in _request
+    timeout=self.timeout, reply=True,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 436, in broadcast
+    limit, callback, channel=channel,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 321, in _broadcast
+    channel=chan)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 360, in _collect
+    self.connection.drain_events(timeout=timeout)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/connection.py", line 301, in drain_events
+    return self.transport.drain_events(self.connection, **kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/transport/pyamqp.py", line 103, in drain_events
+    return connection.drain_events(**kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 491, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 497, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 501, in on_inbound_method
+    method_sig, payload, content,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/abstract_channel.py", line 128, in dispatch_method
+    listener(*args)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 623, in _on_close
+    (class_id, method_id), ConnectionError)
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2018-12-03 16:32:03,738: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds...
+
+[2018-12-03 16:32:05,749: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds...
+
+[2018-12-03 16:32:09,759: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds...
+
+[2018-12-03 16:32:15,771: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds...
+
+[2018-12-03 16:32:23,786: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds...
+
+[2018-12-03 16:32:33,803: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds...
+
+[2018-12-03 16:32:45,821: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds...
+
+[2018-12-03 16:32:59,842: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds...
+
+[2018-12-03 16:33:15,865: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds...
+
+[2018-12-03 19:54:01,858: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 19:54:01,870: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 19:54:02,898: INFO/MainProcess] mingle: all alone
+[2018-12-03 19:54:02,913: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 19:55:46,127: INFO/MainProcess] Received task: orders.tasks.order_created[fb7cc5ae-c068-4b50-8fb1-9a55a3c10208]  
+[2018-12-03 19:55:47,482: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[fb7cc5ae-c068-4b50-8fb1-9a55a3c10208] succeeded in 1.3533984549994784s: 1
+[2018-12-03 20:07:10,052: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 20:07:10,065: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 20:07:11,091: INFO/MainProcess] mingle: all alone
+[2018-12-03 20:07:11,105: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 20:07:50,331: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 20:07:50,353: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 20:07:50,769: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 320, in start
+    blueprint.start(self)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 38, in start
+    self.sync(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 42, in sync
+    replies = self.send_hello(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 55, in send_hello
+    replies = inspect.hello(c.hostname, our_revoked._data) or {}
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 129, in hello
+    return self._request('hello', from_node=from_node, revoked=revoked)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 81, in _request
+    timeout=self.timeout, reply=True,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 436, in broadcast
+    limit, callback, channel=channel,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 321, in _broadcast
+    channel=chan)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 360, in _collect
+    self.connection.drain_events(timeout=timeout)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/connection.py", line 301, in drain_events
+    return self.transport.drain_events(self.connection, **kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/transport/pyamqp.py", line 103, in drain_events
+    return connection.drain_events(**kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 491, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 497, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 501, in on_inbound_method
+    method_sig, payload, content,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/abstract_channel.py", line 128, in dispatch_method
+    listener(*args)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 623, in _on_close
+    (class_id, method_id), ConnectionError)
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2018-12-03 20:07:50,784: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds...
+
+[2018-12-03 20:07:52,796: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds...
+
+[2018-12-03 20:07:56,807: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds...
+
+[2018-12-03 20:08:02,819: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds...
+
+[2018-12-03 20:08:10,834: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds...
+
+[2018-12-03 20:08:20,851: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds...
+
+[2018-12-03 20:08:32,869: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds...
+
+[2018-12-03 20:08:46,890: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds...
+
+[2018-12-03 20:09:02,912: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds...
+
+[2018-12-03 21:50:14,647: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 21:50:14,658: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 21:50:15,685: INFO/MainProcess] mingle: all alone
+[2018-12-03 21:50:15,699: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 21:50:55,512: INFO/MainProcess] Received task: orders.tasks.order_created[e861be9e-7a18-41d6-a6f5-c7f495893359]  
+[2018-12-03 21:50:56,961: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[e861be9e-7a18-41d6-a6f5-c7f495893359] succeeded in 1.4472294679999322s: 1
+[2018-12-03 21:51:17,598: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-03 21:51:17,607: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-03 21:51:18,628: INFO/MainProcess] mingle: all alone
+[2018-12-03 21:51:18,641: INFO/MainProcess] celery@python3github ready.
+[2018-12-03 21:52:06,817: INFO/MainProcess] Received task: orders.tasks.order_created[18dd32fd-808a-43b5-8f18-c86413dc29de]  
+[2018-12-03 21:52:07,692: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[18dd32fd-808a-43b5-8f18-c86413dc29de] succeeded in 0.874164581999139s: 1
+[2018-12-04 07:08:24,566: INFO/MainProcess] Received task: orders.tasks.order_created[634e2e0a-6292-483a-a302-694b8504c629]  
+[2018-12-04 07:08:26,020: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[634e2e0a-6292-483a-a302-694b8504c629] succeeded in 1.452428664000763s: 1
+[2018-12-04 16:28:16,060: INFO/MainProcess] Received task: orders.tasks.order_created[60967124-944b-4810-befa-b10dd23bd7a6]  
+[2018-12-04 16:28:17,762: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[60967124-944b-4810-befa-b10dd23bd7a6] succeeded in 1.7001295240042964s: 1
+[2018-12-04 17:26:29,984: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-04 17:26:29,999: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-04 17:26:30,219: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 320, in start
+    blueprint.start(self)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 38, in start
+    self.sync(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 42, in sync
+    replies = self.send_hello(c)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/mingle.py", line 55, in send_hello
+    replies = inspect.hello(c.hostname, our_revoked._data) or {}
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 129, in hello
+    return self._request('hello', from_node=from_node, revoked=revoked)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 81, in _request
+    timeout=self.timeout, reply=True,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/app/control.py", line 436, in broadcast
+    limit, callback, channel=channel,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 321, in _broadcast
+    channel=chan)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/pidbox.py", line 360, in _collect
+    self.connection.drain_events(timeout=timeout)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/connection.py", line 301, in drain_events
+    return self.transport.drain_events(self.connection, **kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/transport/pyamqp.py", line 103, in drain_events
+    return connection.drain_events(**kwargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 491, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 497, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 501, in on_inbound_method
+    method_sig, payload, content,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/abstract_channel.py", line 128, in dispatch_method
+    listener(*args)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 623, in _on_close
+    (class_id, method_id), ConnectionError)
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2018-12-04 17:26:30,232: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds...
+
+[2018-12-04 17:26:32,240: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds...
+
+[2018-12-04 17:26:36,249: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds...
+
+[2018-12-04 17:26:42,262: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds...
+
+[2018-12-04 17:26:50,275: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds...
+
+[2018-12-04 17:27:00,291: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds...
+
+[2018-12-04 17:27:12,309: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds...
+
+[2018-12-04 17:27:26,330: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds...
+
+[2018-12-04 17:27:42,353: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds...
+
+[2018-12-04 17:29:37,829: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-04 17:29:37,839: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-04 17:29:38,867: INFO/MainProcess] mingle: all alone
+[2018-12-04 17:29:38,881: INFO/MainProcess] celery@python3github ready.
+[2018-12-04 17:30:27,732: INFO/MainProcess] Received task: orders.tasks.order_created[bbfda1cc-7f04-4b9c-b0f8-9880e4385f16]  
+[2018-12-04 17:30:29,259: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[bbfda1cc-7f04-4b9c-b0f8-9880e4385f16] succeeded in 1.525514543000014s: None
+[2018-12-04 21:42:35,788: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2018-12-04 21:42:35,799: INFO/MainProcess] mingle: searching for neighbors
+[2018-12-04 21:42:36,822: INFO/MainProcess] mingle: all alone
+[2018-12-04 21:42:36,835: INFO/MainProcess] celery@python3github ready.
+[2018-12-05 07:27:45,879: INFO/MainProcess] Received task: orders.tasks.order_created[48fc9095-0177-44bc-8ed9-4f8cc60cc11a]  
+[2018-12-05 07:27:47,594: INFO/ForkPoolWorker-1] Task orders.tasks.order_created[48fc9095-0177-44bc-8ed9-4f8cc60cc11a] succeeded in 1.7120893180035637s: None
+[2018-12-06 15:46:27,345: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 320, in start
+    blueprint.start(self)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 596, in start
+    c.loop(*c.loop_args())
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/celery/worker/loops.py", line 88, in asynloop
+    next(loop)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/async/hub.py", line 354, in create_loop
+    cb(*cbargs)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/transport/base.py", line 236, in on_readable
+    reader(loop)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/kombu/transport/base.py", line 218, in _read
+    drain_events(timeout=0)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 491, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 497, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 501, in on_inbound_method
+    method_sig, payload, content,
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/abstract_channel.py", line 128, in dispatch_method
+    listener(*args)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 621, in _on_close
+    self._x_close_ok()
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/connection.py", line 636, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/abstract_channel.py", line 50, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/method_framing.py", line 166, in write_frame
+    write(view[:offset])
+  File "/home/odin/django/shop1/myvenv/lib/python3.6/site-packages/amqp/transport.py", line 275, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2018-12-06 15:46:27,366: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds...
+
+[2018-12-06 15:46:29,377: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds...
+
+[2018-12-06 15:46:33,387: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds...
+
+[2018-12-06 15:46:39,398: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds...
+
+[2018-12-06 15:46:47,413: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds...
+
+[2018-12-06 15:46:57,429: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds...
+
+[2018-12-06 15:47:09,447: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds...
+
+[2018-12-06 15:47:23,469: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds...
+
+[2018-12-06 15:47:39,490: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds...
+
+[2018-12-06 15:47:57,517: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds...
+
+[2018-12-06 15:48:17,544: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds...
+
+[2018-12-06 15:48:39,575: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds...
+
+[2018-12-06 15:49:03,607: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds...
+
+[2018-12-06 15:49:29,640: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds...
+
+[2018-12-06 15:49:57,674: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds...
+
+[2018-12-06 15:50:27,714: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:50:59,754: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:51:31,794: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:52:03,833: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:52:35,873: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:53:07,913: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:53:39,954: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:54:11,994: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:54:44,034: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:55:16,075: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:55:48,115: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:56:20,155: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:56:52,195: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:57:24,236: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:57:56,275: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:58:28,315: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds...
+
+[2018-12-06 15:58:32,021: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds...
+
+[2018-12-06 15:58:34,029: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds...
+
+[2018-12-06 15:58:38,040: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds...
+
+[2018-12-06 15:58:44,051: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds...
+
+[2018-12-06 15:58:52,065: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds...
+
+[2018-12-06 15:59:02,082: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds...
+
+[2018-12-06 15:59:14,100: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds...
+
+[2018-12-06 15:59:28,120: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds...
+
+[2018-12-06 15:59:44,142: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds...
+
